@@ -18,9 +18,6 @@ export class Message<S> {
   };
 
   get senderVal(){
-    if(this.sender instanceof SenderWithGender){
-      
-    }
     return this.sender;
   }
 

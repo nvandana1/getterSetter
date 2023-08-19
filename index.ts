@@ -9,7 +9,9 @@ console.log(message.messageRecieved);
 console.log(message.isSent);
 message.messageSent = 'I am Fine';
 console.log(message.messageRecieved);
-
+if(message.sender instanceof SenderWithGender){
+console.log(true)
+}
 console.log(message.senderVal)
 
 // destructing
