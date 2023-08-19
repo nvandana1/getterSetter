@@ -1,14 +1,29 @@
-export class Message {
-  sender: string;
+export class SenderWithAge{
+  name:string;
+  age:number
+}
+
+export class SenderWithGender{
+  name:string;
+  gender:string
+}
+export class Message<S> {
+  sender: S ;
   message: string;
-  id: number;
   isSent: boolean;
-  constructor(sender, message, id, isSent) {
+  constructor(sender:S, message:string, isSent:boolean) {
     this.sender = sender;
     this.message = message;
-    this.id = id;
     this.isSent = isSent;
+  };
+
+  get senderVal(){
+    if(this.sender instanceof SenderWithGender){
+      
+    }
+    return this.sender;
   }
+
   set messageSent(msg: string) {
     this.message = msg;
   }

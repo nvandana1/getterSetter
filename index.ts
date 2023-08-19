@@ -1,10 +1,16 @@
-import { Message } from './Message';
+import { Message, SenderWithGender } from './Message';
 
-const message = new Message('Vandana', 'Hello,How are you?', 0, true);
+const message:Message<SenderWithGender> = new Message(
+  {name:'Vandana',gender:'Female'},
+   'Hello,How are you?', 
+   true
+   );
 console.log(message.messageRecieved);
 console.log(message.isSent);
 message.messageSent = 'I am Fine';
 console.log(message.messageRecieved);
+
+console.log(message.senderVal)
 
 // destructing
 const details = {name:'vandana',age:22}
