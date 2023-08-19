@@ -1,6 +1,7 @@
-// Import stylesheets
-import './style.css';
+import { Message } from './Message';
 
-// Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+const message = new Message('Vandana', 'Hello,How are you?', 0, true);
+console.log(message.messageRecieved);
+console.log(message.isSent);
+message.messageSent = 'I am Fine';
+console.log(message.messageRecieved)
